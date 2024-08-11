@@ -77,8 +77,16 @@ git branch -r
   
 ### Setup do git 
 
-git config user.email "you@example.com"
-git config user.name "Your Name"
+git config user.email "prof.antoniojunior@fiap.com.br"
+git config user.name "Antonio Carlos"
+
+## Features
+
+
+
+
+
+
 
 
 
