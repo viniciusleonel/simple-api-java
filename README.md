@@ -4,7 +4,9 @@ Aplicação API para fins didáticos
 
 ## Pré-requisito
 
-- Java 17
+- Java 21
+- Git
+- Conta no GitHub.com
 
 ## Setup e Uso
 
@@ -15,7 +17,6 @@ Aplicação API para fins didáticos
 ```sh
 ./mvnw spring-boot:run -Dspring-boot.run.profiles=prd
 ```
-
 
 ## Execução
 
@@ -45,3 +46,40 @@ docker run -d -p 8080:8080 --net=host -e PROFILE=prd api
 
  - https://spring.io/projects/spring-framework
  - https://plantuml.com/
+
+
+
+# Aulas
+
+###  Fork
+
+https://github.com/acnaweb/simple-api-java
+
+### GitFlow
+
+https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+
+### Configuração de branchs
+
+- Criar branch develop
+- Criar branch release
+- Tornar develop default branch
+
+### Clone do projeto
+
+git clone https://github.com/acnaweb/simple-api-java.git
+
+git status 
+    - branch "develop"
+  
+git branch -r
+    - branchs remotas
+  
+### Setup do git 
+
+git config user.email "you@example.com"
+git config user.name "Your Name"
+
+
+
+
