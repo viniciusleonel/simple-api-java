@@ -1,23 +1,12 @@
 # Simple API Java
 
-Aplicação API para fins didáticos
+Aplicação API 
 
 ## Pré-requisito
 
 - Java 21
 - Git
-
-## Setup e Uso
-
-### Execução / Local dev
-
-#### Terminal
-
-```sh
-./mvnw spring-boot:run -Dspring-boot.run.profiles=prd
-```
-
-## Execução
+- Docker
 
 #### Docker
 
@@ -30,11 +19,13 @@ docker build -t api .
 * Executar container
 
 ```
-docker run -d -p 8080:8080 --net=host -e PROFILE=prd api
-
+docker run -p 8080:8080 --net=host \
+-e PROFILE=prd \
+-e DATABASE_URL=jdbc:mysql://localhost:3306/api?createDatabaseIfNotExist=true \
+-e DATABASE_USER=root \
+-e DATABASE_PWD=1234 \
+api
 ```
-
-
 
 
 
