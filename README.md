@@ -2,35 +2,26 @@
 
 Aplicação API 
 
-## Pré-requisito
+## Pré-requisitos
 
 - Java 21
 - Git
 - Docker
 
-#### Docker
+## Build e execução
 
-* Criar imagem
-
-```
-docker build -t api .
+```sh
+docker compose up --build
 ```
 
-* Executar container
+## Testes unitários
 
-```
-docker run -p 8080:8080 --net=host \
--e PROFILE=prd \
--e DATABASE_URL=jdbc:mysql://localhost:3306/api?createDatabaseIfNotExist=true \
--e DATABASE_USER=root \
--e DATABASE_PWD=1234 \
-api
-```
+./mvnw test
 
 
+## Documentação online (OpenAPI)
 
+http://localhost:8080/swagger-ui/index.html
 
-
-
-
+![](/assets/images/swagger.png)
 
