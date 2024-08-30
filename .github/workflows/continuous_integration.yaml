@@ -2,14 +2,13 @@ name: Continuous Integration FIAP
 
 on:
   pull_request:
-    types: [opened, reopened]
-    branches: "feature/**"        
+    branches:
+      - develop     
 
 jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-
         -   name: Git Checkout
             uses: actions/checkout@v4
 
