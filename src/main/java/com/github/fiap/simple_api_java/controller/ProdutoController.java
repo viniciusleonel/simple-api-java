@@ -68,11 +68,21 @@ public class ProdutoController {
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<?> update(@PathVariable Long id) {
+    public ResponseEntity<?> delete(@PathVariable Long id) {
         if (!produtoService.existsById(id)) {
             new RuntimeException("Deu merda");
         }
         
+        produtoService.delete(id);
+        return ResponseEntity.ok().build();
+    }
+
+    @DeleteMapping("teste/{id}")
+    public ResponseEntity<?> teste(@PathVariable Long id) {
+        if (!produtoService.existsById(id)) {
+            new RuntimeException("Deu merda");
+        }
+
         produtoService.delete(id);
         return ResponseEntity.ok().build();
     }
